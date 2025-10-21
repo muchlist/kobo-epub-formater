@@ -1,0 +1,68 @@
+/* Pastikan tabel tidak terpotong dan tetap terbaca */
+#book-content #sbo-rt-content table {
+    font-size: 50% !important;
+    line-height: 1.2 !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+    display: table !important;
+    table-layout: fixed !important; /* Menghindari tabel melebar */
+    margin-bottom: 2em !important; /* Mencegah tabel menghilang di akhir halaman */
+    break-inside: avoid !important; /* Mencegah tabel terpotong antar halaman */
+}
+
+/* Pastikan sel tabel tetap terlihat dan tidak berantakan */
+#book-content #sbo-rt-content td,
+#book-content #sbo-rt-content th {
+    padding: 4px !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+}
+
+/* Hapus scrollbar dengan memastikan tabel bisa pecah ke halaman berikutnya */
+#book-content #sbo-rt-content {
+    overflow: visible !important;
+}
+
+/* Fix code blocks - prevent overflow with proper wrapping */
+#book-content #sbo-rt-content pre,
+#book-content #sbo-rt-content div.codeblock {
+    font-size: 70% !important;
+    overflow: visible !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important; /* Allow wrapping while preserving formatting */
+    word-break: break-word !important;
+}
+
+/* Fix inline code - prevent overflow */
+#book-content #sbo-rt-content code {
+    font-size: 70% !important;
+    overflow: visible !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+}
+
+/* Fix blockquotes/quotations - prevent overflow */
+#book-content #sbo-rt-content blockquote {
+    font-size: 85% !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow: visible !important;
+    margin: 1em 0 !important;
+    padding-left: 1em !important;
+    border-left: 3px solid #ccc !important;
+}
+
+/* Ensure all text content respects viewport width */
+#book-content #sbo-rt-content p,
+#book-content #sbo-rt-content div,
+#book-content #sbo-rt-content span {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
